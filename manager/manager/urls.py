@@ -20,4 +20,5 @@ urlpatterns = [
     path('api/blog/', include('blog.api.urls')),
     path('api/user/', include('users.urls')),
     path('api/blog/<slug>/comments/', include('blog_comment.api.urls')),
+    path('api/blog/<slug>/comments/<int:id>/replies/', include('blog_comment_reply.api.urls')),
 ]

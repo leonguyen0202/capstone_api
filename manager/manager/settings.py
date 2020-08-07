@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     # Internal Modules
     'blog',
     'blog_comment',
+    'blog_comment_reply',
     'users',
     # External Package
     'rest_framework',
