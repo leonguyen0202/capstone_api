@@ -13,7 +13,7 @@ class BlogCommentViewSet(viewsets.ModelViewSet):
     serializer_class = BlogCommentSerializer
 
     @action(detail=True, methods=["GET"])
-    def comments(self, request, slug):
+    def get(self, request, slug):
         blog = Blog.objects.first(slug=slug)
         comments = BlogComment.objects.filter(blog_id=blog)
         serializer = BlogCommentSerializer(comments, many=True)

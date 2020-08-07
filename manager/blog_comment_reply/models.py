@@ -6,8 +6,8 @@ from users.models import Users
 # Create blog comment reply model.
 class BlogCommentReply(models.Model):
     content = models.TextField()
-    blogs_id = models.ForeignKey(Blog, on_delete=models.CASCADE)
-    users_id = models.ForeignKey(Users, on_delete=models.CASCADE)
+    blog_id = models.ForeignKey(Blog, on_delete=models.CASCADE)
+    user_id = models.ForeignKey(Users, on_delete=models.CASCADE)
     comment_id = models.ForeignKey(BlogComment, related_name="replies", on_delete=models.CASCADE)
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now_add=True)
